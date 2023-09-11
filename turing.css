@@ -13,6 +13,7 @@ body {
   background-color: #ffff;
  overflow: auto;
   text-align: center;
+  height: 100vh;
 }
 
 .BoxTitle {
