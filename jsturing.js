@@ -621,19 +621,7 @@ function EnableControls( bStep, bRun, bStop, bReset, bSpeed, bTextarea, bUndo )
   document.getElementById( 'RunButton' ).disabled = !bRun;
   document.getElementById( 'StopButton' ).disabled = !bStop;
   document.getElementById( 'ResetButton' ).disabled = !bReset;
-  document.getElementById( 'SpeedCheckbox' ).disabled = !bSpeed;
   document.getElementById( 'Source' ).disabled = !bTextarea;
-  EnableUndoButton(bUndo);
-  if( bSpeed ) {
-    $( "#SpeedCheckboxLabel" ).removeClass( "disabled" );
-  } else {
-    $( "#SpeedCheckboxLabel" ).addClass( "disabled" );
-  }
-}
-
-function EnableUndoButton(bUndo)
-{
-  document.getElementById( 'UndoButton' ).disabled = !(bUndo && aUndoList.length > 0);
 }
 
 /* Trigger functions for the buttons */
@@ -648,8 +636,7 @@ function StepButton()
 function RunButton()
 {
 	SetStatusMessage( "Running..." );
-	/* Make sure that the step interval is up-to-date */
-	SpeedCheckbox();
+	
 	EnableControls( false, false, true, false, false, false, false );
 	Run();
 }
@@ -670,10 +657,6 @@ function ResetButton()
 	EnableControls( true, true, false, true, true, true, false );
 }
 
-function SpeedCheckbox()
-{
-  bFullSpeed = $( '#SpeedCheckbox' )[0].checked;
-}
 
 function VariantChanged(needWarning)
 {

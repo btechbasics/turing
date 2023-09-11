@@ -62,17 +62,13 @@
 	background-color: #bbf8ff;
 }
 
-.talinebgnext > .talinenum {
-/*	background-color: #bbf8ff;*/
-}
+
 
 .talinebgprev {
 	background-color: #ffcc99;
 }
 
-.talinebgprev > .talinenum {
-/*	background-color: #ffcc99;*/
-}
+
 
 .talinebgerror {
 	background-color: #ffe0e0;

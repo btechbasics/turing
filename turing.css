@@ -179,9 +179,6 @@ body {
   position: relative;
 }
 
-#MachineLowerSection2 {
-}
-
 
 #MachineProgramContainer {
   text-align: center;
@@ -199,8 +196,7 @@ body {
   padding: 4px;
 }
 
-#MachineControlBlock {
-}
+
 .inputBox{
   
   width: 100px;
